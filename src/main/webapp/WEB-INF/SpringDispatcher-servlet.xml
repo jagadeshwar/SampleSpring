@@ -8,9 +8,28 @@
  
     <context:annotation-config />
  
-    <context:component-scan base-package="SpringSamples.SampleSpring"/>
+    <!-- <context:component-scan base-package="SpringSamples.SampleSpring"/> -->
     
-    <bean id="student" class="com.practice.model.Student" scope="session"/>
+    <bean class="SpringSamples.SampleSpring.controller.HomeController" scope="singleton" >
+   <!--  <aop:scoped-proxy/> -->
+    </bean>
+    
+     <bean class="SpringSamples.SampleSpring.controller.HomeController2" scope="singleton">
+    <!--  <aop:scoped-proxy/> -->
+     </bean>
+     
+    <bean id="studentService" class="com.practice.model.StudentService"/>
+    	
+    
+    <bean id="studentService2" class="com.practice.model.StudentService2"/>
+    
+    <!-- <bean id="student" class="com.practice.model.Student" scope="request">
+    	<aop:scoped-proxy/>
+    </bean> -->
+    
+    <bean id="student" class="com.practice.model.Student"/>
+    
+    
     
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     	<property name="prefix" value="/WEB-INF/views/"/>

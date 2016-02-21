@@ -4,22 +4,35 @@ import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-@Repository
+import org.springframework.stereotype.Service;
+@Repository("student")
 public class Student implements Serializable{
-	private String s = "Hello";
+	private String s;//= "Hello";
 	public Student() {
 		System.out.println("Am student");
 	}
 	
 	
-	private String name;
+	private String fname;
 
-	public String getName() {
-		return name;
+	
+
+	public String getFname() {
+		return fname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
+
+	public String getS() {
+		return s;
+	}
+
+	public void setS(String s) {
+		this.s = s;
+	}
+	
+	
 	
 }
