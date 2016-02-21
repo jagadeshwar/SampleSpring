@@ -18,7 +18,7 @@ public class HomeController {
 	Student student;
 	
 	public HomeController() {
-		System.out.println("Hi am home controller ");
+		System.out.println("Hi am home controller jjs");
 	}
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
