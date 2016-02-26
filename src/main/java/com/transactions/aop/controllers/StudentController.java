@@ -28,8 +28,6 @@ import com.transactions.aop.services.StudentService;
 		}
 */
 
-
-
 		@RequestMapping("/addStudent")
 		public ModelAndView addStudent(){
 			
@@ -41,6 +39,8 @@ import com.transactions.aop.services.StudentService;
 			studentService.save(student);
 			return new ModelAndView("addStudent","student",student);
 		}
+		
+		
 		
 	
 	}
