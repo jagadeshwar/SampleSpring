@@ -13,23 +13,26 @@
    http://www.springframework.org/schema/aop
    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">  
     
-    <context:annotation-config />
-    <context:component-scan base-package="com.transactions.aop.controllers"/>
     
 <!--<bean id="student" class="com.practice.model.Student" scope="request">
     	<aop:scoped-proxy/>
     </bean> -->
     
+    <context:annotation-config />
+    <context:component-scan base-package="com.transactions.aop.controllers,com.transactions.aop.*"/>
+    <context:component-scan base-package="com.transactions.aop.dao"/>
+    <!-- <context:component-scan base-package="com.transactions.aop.services"/> -->
+    
     <bean id="student" class="com.practice.model.Student"/>
-    <bean id="studentService" class="com.transactions.aop.services.StudentServiceImpl"/>
-	<bean id="studentDAO" class="com.transactions.aop.dao.StudentDAOImpl"/>
+   
+   
 	
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+<!-- 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location">
-			<value>database.properties</value>
+			<value>classpath:database.properties</value>
 		</property>
 	</bean>
-	<!-- Hibernate Configuration -->
+	Hibernate Configuration
 	
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 		<property name="driverClass" value="${jdbc.driverClassName}" />
@@ -40,7 +43,7 @@
 		<property name="minPoolSize" value="${jdbc.minPoolSize}" />
 		<property name="maxStatements" value="${jdbc.maxStatements}" />
 		<property name="testConnectionOnCheckout" value="${jdbc.testConnection}" />
-	</bean>
+	</bean> -->
 	
 	<!-- <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
@@ -58,7 +61,7 @@
 		</property>
 	 </bean> -->
 	 
-	 <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+	<!--  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
 		<property name="annotatedClasses">
 			<list>
@@ -72,7 +75,7 @@
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
-	 </bean>
+	 </bean> -->
 	    
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     	<property name="prefix" value="/WEB-INF/views/"/>
