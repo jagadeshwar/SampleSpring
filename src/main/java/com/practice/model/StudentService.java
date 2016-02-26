@@ -15,7 +15,7 @@ public class StudentService {
 		System.out.println("Am StudentService");
 	}
 	public void getData(){
-		System.out.println("Hi am getData in services  "+student.hashCode()+"  Name  "+student.getFname());
+		//System.out.println("Hi am getData in services  "+student.hashCode()+"  Name  "+student.getFname());
 	}
 	
 	@PreDestroy
