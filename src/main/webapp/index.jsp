@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="./addStuden">Add Student</a>
+	<a href="./addStudent">Add Student</a>
 </body>
 </html>

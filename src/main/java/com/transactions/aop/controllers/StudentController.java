@@ -2,6 +2,7 @@ package com.transactions.aop.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -29,11 +30,17 @@ import com.transactions.aop.services.StudentService;
 
 
 
-		@RequestMapping("/addStuden")
+		@RequestMapping("/addStudent")
 		public ModelAndView addStudent(){
 			
 			return new ModelAndView("addStudent","student",student);
 		}
-	        
+	    
+		@RequestMapping(value = "/registerStudent")
+		public ModelAndView saveStudent(@ModelAttribute Student student){
+			studentService.save(student);
+			return new ModelAndView("addStudent","student",student);
+		}
+		
 	
 	}
