@@ -9,7 +9,7 @@
 </head>
 <body>
 Hello
-<input type="text" value="${con.firstname}"/>
+<input type="text" value="Message ${msg}"/>
 
 
 

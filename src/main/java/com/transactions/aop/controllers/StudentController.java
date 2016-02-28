@@ -40,6 +40,11 @@ import com.transactions.aop.services.StudentService;
 			return new ModelAndView("addStudent","student",student);
 		}
 		
+		@RequestMapping("/displayvalue")
+		public ModelAndView displayValue(){
+			String message = "Hello ";
+			return new ModelAndView("hello","msg",message);
+		}
 		
 		
 	

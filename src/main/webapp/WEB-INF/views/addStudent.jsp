@@ -9,7 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form method="post" commandName="student" action="registerStudent">
+
+<form:form method="post" commandName="student" action="registerStudent.jsp">
  
     <table>
     <tr>

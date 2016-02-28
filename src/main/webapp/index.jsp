@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="./addStudent">Add Student</a>
+	<a href="./addStudent.jsp">Add Student</a>
+	<a href="./displayvalue">Display Value</a>
 </body>
 </html>
