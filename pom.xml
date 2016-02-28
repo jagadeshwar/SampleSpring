@@ -14,6 +14,8 @@
 		<java.version>1.6</java.version>
 		<spring.version>3.1.0.RELEASE</spring.version>
 		<cglib.version>2.2.2</cglib.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
+		<org.aspectj-version>1.7.4</org.aspectj-version>
 	</properties>
 
 	<dependencies>
@@ -53,7 +55,41 @@
 			<scope>runtime</scope>
 		</dependency>
 		
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- AspectJ -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${org.aspectj-version}</version>
+        </dependency> 
+		
 		<!-- DB Dependencies -->
+		
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.2.1</version>
+		</dependency>
+		
+         
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+		
+		
 
 		<!-- Servlet Spec -->
 		<dependency>

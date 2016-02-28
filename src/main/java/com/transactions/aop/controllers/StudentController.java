@@ -46,6 +46,10 @@ import com.transactions.aop.services.StudentService;
 			return new ModelAndView("hello","msg",message);
 		}
 		
-		
+		@RequestMapping("/")
+		public ModelAndView defaultController(){
+			System.out.println("Default ");
+			return new ModelAndView("index","msg",null);
+		}
 	
 	}
